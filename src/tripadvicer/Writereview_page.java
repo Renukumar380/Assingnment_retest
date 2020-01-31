@@ -3,24 +3,24 @@ package tripadvicer;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import genric.Base_Page;
 
 public class Writereview_page extends Base_Page
 {
 	public WebDriver driver;
-	WebDriverWait wait = new WebDriverWait(driver, 5);
+	
 	public Writereview_page(WebDriver driver)
 	{
 		super(driver);
 	}
 	
-	@FindBy(xpath="//span[@class='ui_bubble_rating fl bubble_50']")
+	@FindBy(xpath="//span[@id='bubble_rating']")
 	public WebElement bubblebtn ;
 	
 	
@@ -36,50 +36,41 @@ public class Writereview_page extends Base_Page
 	@FindBy(xpath="//select[@id='trip_date_month_year']")
 	public WebElement dropdownclk;
 	
-	@FindBy(xpath="(//div[@class='wartag-Shoeshine  answersYesNo jfy_cloud'])[1]")
+	@FindBy(xpath="//div[@data-tagid='-190721']")
 	private WebElement shoeshineservicesbtn;
-		
-	@FindBy(xpath="//(div[@class='wartag-CleanThemeBased  answersYesNo jfy_cloud'])[1]")
+	
+	@FindBy(xpath="//div[@data-tagid='-202641']")
 	private WebElement cleanhotel;
 	
-	@FindBy(xpath="//div[@class='wartag-ModernThemeBased selected  answersYesNo jfy_cloud']")
+	@FindBy(xpath="//div[@data-tagid='-202791']")
 	private WebElement modernhotel;
 	
-	@FindBy(xpath="//div[@class='wartag-ThemedThemeBased selected  answersYesNo jfy_cloud']")
+	@FindBy(xpath="//div[@data-tagid='-202861']")
 	private WebElement wartagThemed;
 	
-	
-	@FindBy(xpath="//div[@class='wartag-WeddingThemeBased selected  answersYesNo jfy_cloud']")
+	@FindBy(xpath="//div[@data-tagid='-202911']")
 	private WebElement wartagWedding;
-	
-	@FindBy(xpath="//div[@class='wartag-SafeThemeBased selected  answersYesNo jfy_cloud']")
+
+	@FindBy(xpath="//div[@data-tagid='-203581']")
 	private WebElement wartagSafe;
 	
-	@FindBy(xpath="//span[@class='answersBubbles ui_bubble_rating fl qid12 bubble_50']")
-	private WebElement ServiceBubbles;
 	
-	@FindBy(xpath="//span[@class='answersBubbles ui_bubble_rating fl qid11 bubble_50']")
-	private WebElement RoomsBubbles;
-	
-	@FindBy(xpath="//span[@class='answersBubbles ui_bubble_rating fl qid190 bubble_50']")
-	private WebElement SleepQualityBubbles;
+	@FindBy(xpath="//span[@data-name='Service']")
+	public WebElement ServiceBubbles;
 	
 	@FindBy(xpath="//input[@id='noFraud']")
-	private WebElement Submitreviewchkbox;
+	public WebElement Submitreviewchkbox;
 	
 	@FindBy(xpath="//div[@id='SUBMIT']")
 	private WebElement Submitbtn;
 	
 	public void bubblebtnclk()
 	{
-		wait.until(ExpectedConditions.visibilityOf(bubblebtn));
-		Actions act = new Actions(driver);
-		act.moveToElement(bubblebtn).perform();
-		bubblebtn.click();
+			bubblebtn.click();
 	}
 	public void ReviewTitlebox(String feedback )
 	{
-		wait.until(ExpectedConditions.visibilityOf(ReviewTitle));
+		
 		ReviewTitle.sendKeys(feedback);
 	}
 	public void ReviewTextbox(String feedback )
@@ -99,52 +90,40 @@ public class Writereview_page extends Base_Page
 		}
 	public void shoeshineservicesyes()
 	{
-		shoeshineservicesbtn.click();;
+		shoeshineservicesbtn.click();
 	}
 	public void cleanhotelyes()
 	{
-		cleanhotel.click();;
+		cleanhotel.click();
 	}
 	public void modernhotelyes()
 	{
-		modernhotel.click();;
+		modernhotel.click();
 	}
 	public void wartagThemedyes()
 	{
-		wartagThemed.click();;
+		wartagThemed.click();
 	}
 	public void wartagWeddingyes()
 	{
-		wartagWedding.click();;
+		wartagWedding.click();
 	}
 	public void wartagSafeyes()
 	{
-		wartagSafe.click();;
+		wartagSafe.click();
 	}
 	public void ServiceBubblesbtn()
 	{
-		Actions act1 = new Actions(driver);
-		act1.moveToElement(ServiceBubbles).perform();
-		ServiceBubbles.click();;
+		
+		ServiceBubbles.click();
 	}
-	public void RoomBubblesbtn()
+	
+	public void Submitreviewchkbxbtn()
 	{
-		Actions act1 = new Actions(driver);
-		act1.moveToElement(RoomsBubbles).perform();
-		RoomsBubbles.click();;
-	}
-	public void SleepQualityBubblesbtn()
-	{
-		Actions act1 = new Actions(driver);
-		act1.moveToElement(SleepQualityBubbles).perform();
-		SleepQualityBubbles.click();;
-	}
-	public void Submitreviewchkbx()
-	{
-		Submitreviewchkbox.click();;
+		Submitreviewchkbox.click();
 	}
 	public void Submitreviewbtn()
 	{
-		Submitbtn.click();;
+		Submitbtn.click();
 	}
 }

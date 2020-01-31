@@ -20,14 +20,15 @@ public WebDriver driver;
 public WebElement closebtn;
 	
 @FindBy(xpath ="//input[@name='q']")
-public
- WebElement searchbox;
+public WebElement searchbox;
 
 @FindBy(xpath="//button[@type='submit']")
 public WebElement searchbtn;
 
 @FindBy(xpath = "//div[.='Apple iPhone XR (Yellow, 64 GB)']")
 public WebElement selectphn;
+
+
 
 
 

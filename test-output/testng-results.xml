@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="66537" started-at="2020-01-25T08:18:59Z" finished-at="2020-01-25T08:20:06Z">
+  <suite name="Default suite" duration-ms="97422" started-at="2020-01-31T03:39:53Z" finished-at="2020-01-31T03:41:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="66537" started-at="2020-01-25T08:18:59Z" finished-at="2020-01-25T08:20:06Z">
-      <class name="test_class.Test_page">
-        <test-method status="PASS" signature="test()[pri:0, instance:test_class.Test_page@174d20a]" name="test" duration-ms="66514" started-at="2020-01-25T13:48:59Z" finished-at="2020-01-25T13:50:06Z">
+    <test name="Default test" duration-ms="97422" started-at="2020-01-31T03:39:53Z" finished-at="2020-01-31T03:41:30Z">
+      <class name="test_class.Trip_test_page">
+        <test-method status="PASS" signature="test()[pri:0, instance:test_class.Trip_test_page@7ac7a4e4]" name="test" duration-ms="97396" started-at="2020-01-31T09:09:53Z" finished-at="2020-01-31T09:11:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-      </class> <!-- test_class.Test_page -->
+      </class> <!-- test_class.Trip_test_page -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -7,12 +7,15 @@ import org.openqa.selenium.support.FindBy;
 import genric.Base_Page;
 public class Flip_Phnordr_page extends Base_Page
 {
+	
+ 
 	public WebDriver driver;
 	public Flip_Phnordr_page(WebDriver driver)
 	{
 		super(driver);
 	}
 	@FindBy(xpath = "//div[@class='_1vC4OE _3qQ9m1']")
+	
 	private WebElement phnprice;
 	
 	public  int get_price() throws InterruptedException
@@ -28,7 +31,8 @@ public class Flip_Phnordr_page extends Base_Page
 	        int Flip_val=Integer.parseInt(str3);
 	        System.out.println("Flipkart iphone rate is "+Flip_val);
 			return Flip_val;
-	        
+			
+			
 	}
 
 }

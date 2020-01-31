@@ -21,14 +21,15 @@ public class Tripadvcr_home_page extends Base_Page
 	@FindBy(xpath = "//span[.='Search']")
 	public WebElement searchbox;
 	
+	@FindBy(xpath = "//input[@id='mainSearch']")
+	public WebElement mainsearchbox;
+	
 	public void searchsnt()
 	{
 		searchbox.click();
 		
 	}
-	@FindBy(xpath = "//input[@id='mainSearch']")
-	private WebElement mainsearchbox;
-	
+		
 	public void senttxtsearch(String restaurants_name)
 	{
 		

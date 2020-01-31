@@ -15,7 +15,7 @@ public WebDriver driver;
 		PageFactory.initElements(driver,this);
 	}
 	@FindBy(xpath="//input[@id='twotabsearchtextbox']")
-	private WebElement searchbox;
+	public WebElement searchbox;
 	
 	@FindBy(xpath="//input[@value='Go']")
 	private WebElement searchclk;
@@ -35,4 +35,7 @@ public WebDriver driver;
 	{
 		seletphnclk.click();
 	}
-}
+	
+		
+	}
+
